@@ -2859,15 +2859,3 @@ a.globalFooterCard.card-sigma, div.globalFooterCard.card-sigma {
 }
 
 </style>
-<script>
-export default {
-  head: {
-    script: [
-      { src: '/plugins/nav.js' },
-      // Supported since Nuxt 1.0
-      { src: '/body.js', body: true },
-      { src: '/defer.js', defer: '' }
-    ]
-  }
-}
-</script>
