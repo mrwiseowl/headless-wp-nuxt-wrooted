@@ -8,10 +8,10 @@
 export default {
   head: {
     script: [
-      { src: '/plugins/nav.js' },
+      { src: '~/plugins/nav.js' },
       // Supported since Nuxt 1.0
-      { src: '/body.js', body: true },
-      { src: '/defer.js', defer: '' }
+      { src: '/plugins/nav.js', body: true },
+      { src: '/plugins/nav.js', defer: '' }
     ]
   }
 }
