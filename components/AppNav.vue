@@ -513,7 +513,18 @@
         </div>
     </header>
 </template>
-
+<script>
+export default {
+  head: {
+    script: [
+      { src: '~/plugins/nav.js' },
+      // Supported since Nuxt 1.0
+      { src: '/plugins/nav.js', body: true },
+      { src: '/plugins/nav.js', defer: '' }
+    ]
+  }
+}
+</script>
 <script>
 import AppIcon from "@/components/AppIcon.vue";
 
