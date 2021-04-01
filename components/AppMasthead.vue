@@ -35,7 +35,7 @@
 </header>
 <main class="responsive-wrapper">
   <div class="page-title">
-    <h1>Latest Updates</h1>
+      <h1>{{ tagline }}</h1>
   </div>
   <div class="magazine-layout">
     <div class="magazine-column">
@@ -190,7 +190,6 @@
 </main>
   </section>
 </template>
-    <h1>{{ tagline }}</h1>
 <script>
 export default {
   data() {
