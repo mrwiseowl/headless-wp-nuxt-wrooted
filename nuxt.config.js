@@ -32,6 +32,11 @@ export default {
         href:
           "https://fonts.googleapis.com/css?family=Alata|Open+Sans&display=swap"
       }
+    ],
+    script: [
+      {
+        src: "assets/js/nav.js"
+      }
     ]
   },
   /*
@@ -64,7 +69,6 @@ export default {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {},
-    vendor: ['~assets/js/nav.js'],
+    extend(config, ctx) {}
   }
 }
