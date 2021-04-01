@@ -1,530 +1,163 @@
 <template>
-  <header class="globalNav overlayActive dropdownActive">
-        <div class="container-lg">
-            <ul class="navRoot">
-                <li class="navSection logo">
-                    <a class="rootLink item-home colorize" href="/">
-                    <h1><svg height="25" width="62">
-                    <title>Stripe</title>
-                    <path d=
-                    "M5 10.1c0-.6.6-.9 1.4-.9 1.2 0 2.8.4 4 1.1V6.5c-1.3-.5-2.7-.8-4-.8C3.2 5.7 1 7.4 1 10.3c0 4.4 6 3.6 6 5.6 0 .7-.6 1-1.5 1-1.3 0-3-.6-4.3-1.3v3.8c1.5.6 2.9.9 4.3.9 3.3 0 5.5-1.6 5.5-4.5.1-4.8-6-3.9-6-5.7zM29.9 20h4V6h-4v14zM16.3 2.7l-3.9.8v12.6c0 2.4 1.8 4.1 4.1 4.1 1.3 0 2.3-.2 2.8-.5v-3.2c-.5.2-3 .9-3-1.4V9.4h3V6h-3V2.7zm8.4 4.5L24.6 6H21v14h4v-9.5c1-1.2 2.7-1 3.2-.8V6c-.5-.2-2.5-.5-3.5 1.2zm5.2-2.3l4-.8V.8l-4 .8v3.3zM61.1 13c0-4.1-2-7.3-5.8-7.3s-6.1 3.2-6.1 7.3c0 4.8 2.7 7.2 6.6 7.2 1.9 0 3.3-.4 4.4-1.1V16c-1.1.6-2.3.9-3.9.9s-2.9-.6-3.1-2.5H61c.1-.2.1-1 .1-1.4zm-7.9-1.5c0-1.8 1.1-2.5 2.1-2.5s2 .7 2 2.5h-4.1zM42.7 5.7c-1.6 0-2.5.7-3.1 1.3l-.1-1h-3.6v18.5l4-.7v-4.5c.6.4 1.4 1 2.8 1 2.9 0 5.5-2.3 5.5-7.4-.1-4.6-2.7-7.2-5.5-7.2zm-1 11c-.9 0-1.5-.3-1.9-.8V10c.4-.5 1-.8 1.9-.8 1.5 0 2.5 1.6 2.5 3.7 0 2.2-1 3.8-2.5 3.8z">
-                    </path></svg></h1></a>
-                </li>
-                <li class="navSection primary">
-                    <a class="rootLink item-products hasDropdown colorize active" data-dropdown=
-                    "products">Products</a> <a class=
-                    "rootLink item-developers hasDropdown colorize" data-dropdown=
-                    "developers">Developers</a> <a class=
-                    "rootLink item-company hasDropdown colorize" data-dropdown=
-                    "company">Company</a> <a class="rootLink item-pricing colorize"
-                    data-analytics-action="pricing" data-analytics-source="global_nav" href=
-                    "https://stripe.com/pricing">Pricing</a>
-                </li>
-                <li class="navSection secondary">
-                    <a class="rootLink item-support colorize" data-analytics-action="support"
-                    data-analytics-source="global_nav" href=
-                    "https://support.stripe.com">Support</a> <a class=
-                    "rootLink item-dashboard colorize" data-adroll-segment="submit_two"
-                    data-analytics-action="sign_in" data-analytics-source="global_nav" href=
-                    "https://dashboard.stripe.com/login">Sign in</a>
-                </li>
-                <li class="navSection mobile">
-                    <a class="rootLink item-mobileMenu colorize">
-                    <h2>Menu</h2></a>
-                    <div class="popup">
-                        <div class="popupContainer">
-                            <a class="popupCloseButton">Close</a>
-                            <div class="mobileProducts">
-                                <h4>Products</h4>
-                                <div class="mobileProductsList">
-                                    <ul>
-                                        <li>
-                                            <a class="linkContainer item-payments"
-                                            data-analytics-action="payments" data-analytics-source=
-                                            "mobile_nav" href=
-                                            "https://stripe.com/payments"><svg viewbox="0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M24 48C12.11 48 2.244 39.35.338 28H6.5V9H5.27C9.67 3.515 16.423 0 24 0c13.255 0 24 10.745 24 24S37.255 48 24 48z"
-                                            fill="#87BBFD"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M25 21v8H.526A24.082 24.082 0 0 1 0 24 23.908 23.908 0 0 1 6.116 8H31.5c.828 0 1.5.67 1.5 1.5V21h-8zm-10.502-8.995a6.497 6.497 0 1 0 0 12.994 6.497 6.497 0 0 0 0-12.996z"
-                                            fill="#555ABF"></path>
-                                            <path d=
-                                            "M39.823 39.276a2.44 2.44 0 0 1-1.76.724H16.5a1.5 1.5 0 0 1-1.5-1.5v-18c0-.828.67-1.5 1.5-1.5h27.693a1.51 1.51 0 0 1 1.484 1.256c.21 1.217.323 2.467.323 3.744 0 5.936-2.355 11.32-6.177 15.276zM33.5 23.002a6.497 6.497 0 1 0 0 12.995 6.497 6.497 0 0 0 .002-12.994z"
-                                            fill="#FFF"></path></svg>Payments</a>
-                                        </li>
-                                        <li>
-                                            <a class="linkContainer item-subscriptions"
-                                            data-analytics-action="subscriptions"
-                                            data-analytics-source="mobile_nav" href=
-                                            "https://stripe.com/subscriptions"><svg viewbox=
-                                            "0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"
-                                            fill="#74E4A2"></path>
-                                            <path d=
-                                            "M39.558 30.977c-6.23 6.225-16.304 6.194-22.535-.03l13.975-13.962c-6.232-6.224-16.335-6.224-22.567 0-4.043 4.04-5.456 9.712-4.247 14.896l-.654.174a21.89 21.89 0 0 1-1.536-8.61c.284-11.806 10.003-21.35 21.823-21.446 6.15-.05 11.72 2.42 15.744 6.438 6.23 6.226 6.23 16.318 0 22.542z"
-                                            fill="#FFF"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M33.653 21.413c1.43 5.336-1.735 10.82-7.068 12.25-5.332 1.43-10.814-1.736-12.242-7.072-1.43-5.334 1.735-10.82 7.068-12.25 5.334-1.43 10.815 1.738 12.244 7.074z"
-                                            fill="#159570"></path></svg>Subscriptions</a>
-                                        </li>
-                                        <li>
-                                            <a class="linkContainer item-connect"
-                                            data-analytics-action="connect" data-analytics-source=
-                                            "mobile_nav" href=
-                                            "https://stripe.com/connect"><svg viewbox="0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c1.363 0 2.698.12 4 .338V15h5v5h14.662c.218 1.302.338 2.637.338 4z"
-                                            fill="#68D4F8"></path>
-                                            <path d=
-                                            "M16.99 29.966L17 17l-5.55-.006a1.02 1.02 0 0 0-.725.3L2.65 25.446a1.55 1.55 0 0 0-.44 1.28c1.22 9.944 9.1 17.825 19.042 19.047.472.058.945-.104 1.28-.44l8.172-8.076c.192-.193.3-.453.3-.725L31 31l-12.985-.01a1.023 1.023 0 0 1-1.024-1.024z"
-                                            fill="#FFF"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M47.697 20.195L37.194 30.702a1.03 1.03 0 0 1-.726.3h-5.462V18.03c0-.567-.46-1.025-1.025-1.025H16.994V11.52c0-.274.108-.534.3-.726L27.783.3C38 1.916 46.07 9.98 47.698 20.194z"
-                                            fill="#217AB7"></path></svg>Connect</a>
-                                        </li>
-                                        <li>
-                                            <a class="linkContainer item-sigma"
-                                            data-analytics-action="sigma" data-analytics-source=
-                                            "mobile_nav" href=
-                                            "https://stripe.com/sigma"><svg viewbox="0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M24 48c-2.6 0-5-.3-7.2-1.1V35.2H4v2.1c-2.6-4-4-8.6-4-13.3C0 12.6 7.8 3.2 18.4.6V4h14.4V1.6C41.8 5.1 48 13.8 48 24c0 13.3-10.7 24-24 24z"
-                                            fill="#beb0f4"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M45.6 24H32.8v17.6H17.6v-.2 5.8c-6.4-1.8-11.7-6.1-14.9-12 2.1-6.6 8-10.9 14.9-11.2V.8C19.7.3 21.9 0 24 0c3.4 0 6.7.6 9.6 1.9v8c0 6.1 4.5 10.9 10.2 11.7 1 .2 1.8 1.3 1.8 2.4z"
-                                            fill="#7356b6"></path>
-                                            <path d=
-                                            "M45.6 24c0 1.1-.8 2.1-1.8 2.2-5.8 1-10.2 5.8-10.2 11.7v5.3c-3 1.4-6.2 2.2-9.6 2.2-2.2 0-4.3-.3-6.4-1V40c0-7 5.8-13 12.5-13.8C31.2 26 32 25.1 32 24h13.6zM4 15.7C6.6 9.8 11.5 5.3 17.6 3.4V8c0 7 5.8 12.8 12.5 13.8 1.1.2 1.9 1.1 1.9 2.2H17.9C12 24 6.7 20.6 4 15.7z"
-                                            fill="#FFF"></path></svg>Sigma <span class=
-                                            "new-badge">New</span></a>
-                                        </li>
-                                    </ul>
-                                    <ul>
-                                        <li>
-                                            <a class="linkContainer item-atlas"
-                                            data-analytics-action="atlas" data-analytics-source=
-                                            "mobile_nav" href=
-                                            "https://stripe.com/atlas"><svg viewbox="0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"
-                                            fill="#FCD669"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M24.012 1.834c.366.005.73.196.92.575l16.825 33.72c.396.79-.314 1.685-1.175 1.48L24 33.626V1.834h.01z"
-                                            fill="#CE7C3A"></path>
-                                            <path d=
-                                            "M24 1.834v31.794l-16.584 3.98A1.043 1.043 0 0 1 6.24 36.13L23.067 2.41c.195-.39.572-.58.947-.576H24z"
-                                            fill="#FFF"></path></svg>Atlas</a>
-                                        </li>
-                                        <li>
-                                            <a class="linkContainer item-radar"
-                                            data-analytics-action="radar" data-analytics-source=
-                                            "mobile_nav" href=
-                                            "https://stripe.com/radar"><svg viewbox="0 0 48 48">
-                                            <path class="hover-fillLight" d=
-                                            "M41.364 21.886h6.538c.06.697.098 1.4.098 2.114 0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c6.833 0 12.993 2.86 17.364 7.442v14.444z"
-                                            fill="#F6A4EB"></path>
-                                            <path d=
-                                            "M37.746 37.4a1.3 1.3 0 0 1 .92-.38c.72 0 1.303.444 1.303 1.163 0 .503-.353.982-.708 1.292-3.484 3.122-8.325 5.53-13.783 5.53-11.75 0-19.486-9.538-19.486-18.83 0-8.72 7.195-16.19 15.25-16.19s11.227 5.54 11.227 5.54L37.747 37.4z"
-                                            fill="#FFF"></path>
-                                            <path class="hover-fillDark" d=
-                                            "M47.995 24zm0 0c0-.995-.807-1.974-1.802-1.974-1.15 0-1.8.94-1.8 1.83-.09 3.174-1.228 7.127-3.453 10.182-2.355 3.232-6.91 6.956-13.242 6.956-7.625 0-13.213-5.767-13.213-11.925 0-4.3 2.886-7.17 5.828-7.17 1.588 0 2.48.683 2.965 1.312.362.468 1.063.493 1.482.074L40.968 7.032A23.926 23.926 0 0 1 47.995 24z"
-                                            fill="#9251AC"></path></svg>Radar</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="mobileSecondaryNav">
-                                <ul>
-                                    <li>
-                                        <a class="item-pricing" data-analytics-action="pricing"
-                                        data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/pricing">Pricing</a>
-                                    </li>
-                                    <li>
-                                        <a class="item-workswith" data-analytics-action=
-                                        "works-with" data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/works-with">Works with Stripe</a>
-                                    </li>
-                                    <li>
-                                        <a class="item-gallery" data-analytics-action="customers"
-                                        data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/customers">Customers</a>
-                                    </li>
-                                    <li>
-                                        <a class="item-documentation" data-analytics-action=
-                                        "documentation" data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/docs">Documentation</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <a class="item-about" data-analytics-action="about"
-                                        data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/about">About Stripe</a>
-                                    </li>
-                                    <li>
-                                        <a class="item-jobs" data-analytics-action="jobs"
-                                        data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/jobs">Jobs</a>
-                                    </li>
-                                    <li>
-                                        <a class="item-blog" data-analytics-action="blog"
-                                        data-analytics-source="mobile_nav" href=
-                                        "https://stripe.com/blog">Blog</a>
-                                    </li>
-                                </ul>
-                            </div><a class="mobileSignIn" data-adroll-segment="submit_two"
-                            data-analytics-action="sign_in" data-analytics-source="mobile_nav"
-                            href="https://dashboard.stripe.com/login">Sign in</a>
-                        </div>
-                    </div>
-                </li>
-            </ul>
-        </div>
-        <div class="dropdownRoot">
-            <div class="dropdownBackground" style=
-            "transform: translateX(540px) scaleX(1.22632) scaleY(1.3575);">
-                <div class="alternateBackground" style="transform: translateY(201.105px);"></div>
-            </div>
-            <div class="dropdownArrow" style="transform: translateX(773px) rotate(45deg);"></div>
-            <div class="dropdownContainer" style=
-            "transform: translateX(540px); width: 466px; height: 543px;">
-                <div class="dropdownSection active" data-dropdown="products">
-                    <div class="dropdownContent" style="width: 466px; height: 543px;">
-                        <div class="linkGroup">
-                            <ul class="productsGroupPrimary">
-                                <li>
-                                    <a class="linkContainer item-payments" data-analytics-action=
-                                    "payments" data-analytics-source="nav_dropdown" href=
-                                    "https://stripe.com/payments"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M24 48C12.11 48 2.244 39.35.338 28H6.5V9H5.27C9.67 3.515 16.423 0 24 0c13.255 0 24 10.745 24 24S37.255 48 24 48z"
-                                    fill="#87BBFD"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M25 21v8H.526A24.082 24.082 0 0 1 0 24 23.908 23.908 0 0 1 6.116 8H31.5c.828 0 1.5.67 1.5 1.5V21h-8zm-10.502-8.995a6.497 6.497 0 1 0 0 12.994 6.497 6.497 0 0 0 0-12.996z"
-                                    fill="#555ABF"></path>
-                                    <path d=
-                                    "M39.823 39.276a2.44 2.44 0 0 1-1.76.724H16.5a1.5 1.5 0 0 1-1.5-1.5v-18c0-.828.67-1.5 1.5-1.5h27.693a1.51 1.51 0 0 1 1.484 1.256c.21 1.217.323 2.467.323 3.744 0 5.936-2.355 11.32-6.177 15.276zM33.5 23.002a6.497 6.497 0 1 0 0 12.995 6.497 6.497 0 0 0 .002-12.994z"
-                                    fill="#FFF"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Payments</h3>
-                                        <p class="linkSub">A complete commerce toolkit, built
-                                        for&nbsp;developers.</p>
-                                    </div></a>
-                                </li>
-                                <li>
-                                    <a class="linkContainer item-subscriptions"
-                                    data-analytics-action="subscriptions" data-analytics-source=
-                                    "nav_dropdown" href=
-                                    "https://stripe.com/subscriptions"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"
-                                    fill="#74E4A2"></path>
-                                    <path d=
-                                    "M39.558 30.977c-6.23 6.225-16.304 6.194-22.535-.03l13.975-13.962c-6.232-6.224-16.335-6.224-22.567 0-4.043 4.04-5.456 9.712-4.247 14.896l-.654.174a21.89 21.89 0 0 1-1.536-8.61c.284-11.806 10.003-21.35 21.823-21.446 6.15-.05 11.72 2.42 15.744 6.438 6.23 6.226 6.23 16.318 0 22.542z"
-                                    fill="#FFF"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M33.653 21.413c1.43 5.336-1.735 10.82-7.068 12.25-5.332 1.43-10.814-1.736-12.242-7.072-1.43-5.334 1.735-10.82 7.068-12.25 5.334-1.43 10.815 1.738 12.244 7.074z"
-                                    fill="#159570"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Subscriptions</h3>
-                                        <p class="linkSub">The smart engine for
-                                        recurring&nbsp;payments.</p>
-                                    </div></a>
-                                </li>
-                                <li>
-                                    <a class="linkContainer item-connect" data-analytics-action=
-                                    "connect" data-analytics-source="nav_dropdown" href=
-                                    "https://stripe.com/connect"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M48 24c0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c1.363 0 2.698.12 4 .338V15h5v5h14.662c.218 1.302.338 2.637.338 4z"
-                                    fill="#68D4F8"></path>
-                                    <path d=
-                                    "M16.99 29.966L17 17l-5.55-.006a1.02 1.02 0 0 0-.725.3L2.65 25.446a1.55 1.55 0 0 0-.44 1.28c1.22 9.944 9.1 17.825 19.042 19.047.472.058.945-.104 1.28-.44l8.172-8.076c.192-.193.3-.453.3-.725L31 31l-12.985-.01a1.023 1.023 0 0 1-1.024-1.024z"
-                                    fill="#FFF"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M47.697 20.195L37.194 30.702a1.03 1.03 0 0 1-.726.3h-5.462V18.03c0-.567-.46-1.025-1.025-1.025H16.994V11.52c0-.274.108-.534.3-.726L27.783.3C38 1.916 46.07 9.98 47.698 20.194z"
-                                    fill="#217AB7"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Connect</h3>
-                                        <p class="linkSub">Everything platforms need to get
-                                        sellers&nbsp;paid.</p>
-                                    </div></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="linkGroup">
-                            <ul class="productsGroupSecondary">
-                                <li>
-                                    <a class="linkContainer item-sigma" data-analytics-action=
-                                    "sigma" data-analytics-source="nav_dropdown" href=
-                                    "https://stripe.com/sigma"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M24 48c-2.6 0-5-.3-7.2-1.1V35.2H4v2.1c-2.6-4-4-8.6-4-13.3C0 12.6 7.8 3.2 18.4.6V4h14.4V1.6C41.8 5.1 48 13.8 48 24c0 13.3-10.7 24-24 24z"
-                                    fill="#beb0f4"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M45.6 24H32.8v17.6H17.6v-.2 5.8c-6.4-1.8-11.7-6.1-14.9-12 2.1-6.6 8-10.9 14.9-11.2V.8C19.7.3 21.9 0 24 0c3.4 0 6.7.6 9.6 1.9v8c0 6.1 4.5 10.9 10.2 11.7 1 .2 1.8 1.3 1.8 2.4z"
-                                    fill="#7356b6"></path>
-                                    <path d=
-                                    "M45.6 24c0 1.1-.8 2.1-1.8 2.2-5.8 1-10.2 5.8-10.2 11.7v5.3c-3 1.4-6.2 2.2-9.6 2.2-2.2 0-4.3-.3-6.4-1V40c0-7 5.8-13 12.5-13.8C31.2 26 32 25.1 32 24h13.6zM4 15.7C6.6 9.8 11.5 5.3 17.6 3.4V8c0 7 5.8 12.8 12.5 13.8 1.1.2 1.9 1.1 1.9 2.2H17.9C12 24 6.7 20.6 4 15.7z"
-                                    fill="#FFF"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Sigma <span class=
-                                        "new-badge">New</span></h3>
-                                        <p class="linkSub">Your business data at
-                                        your&nbsp;fingertips.</p>
-                                    </div></a>
-                                </li>
-                                <li>
-                                    <a class="linkContainer item-atlas" data-analytics-action=
-                                    "atlas" data-analytics-source="nav_dropdown" href=
-                                    "https://stripe.com/atlas"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M24 0c13.255 0 24 10.745 24 24S37.255 48 24 48 0 37.255 0 24 10.745 0 24 0z"
-                                    fill="#FCD669"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M24.012 1.834c.366.005.73.196.92.575l16.825 33.72c.396.79-.314 1.685-1.175 1.48L24 33.626V1.834h.01z"
-                                    fill="#CE7C3A"></path>
-                                    <path d=
-                                    "M24 1.834v31.794l-16.584 3.98A1.043 1.043 0 0 1 6.24 36.13L23.067 2.41c.195-.39.572-.58.947-.576H24z"
-                                    fill="#FFF"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Atlas</h3>
-                                        <p class="linkSub">The best way to start an
-                                        internet&nbsp;business.</p>
-                                    </div></a>
-                                </li>
-                                <li>
-                                    <a class="linkContainer item-radar" data-analytics-action=
-                                    "radar" data-analytics-source="nav_dropdown" href=
-                                    "https://stripe.com/radar"><svg viewbox="0 0 48 48">
-                                    <path class="hover-fillLight" d=
-                                    "M41.364 21.886h6.538c.06.697.098 1.4.098 2.114 0 13.255-10.745 24-24 24S0 37.255 0 24 10.745 0 24 0c6.833 0 12.993 2.86 17.364 7.442v14.444z"
-                                    fill="#F6A4EB"></path>
-                                    <path d=
-                                    "M37.746 37.4a1.3 1.3 0 0 1 .92-.38c.72 0 1.303.444 1.303 1.163 0 .503-.353.982-.708 1.292-3.484 3.122-8.325 5.53-13.783 5.53-11.75 0-19.486-9.538-19.486-18.83 0-8.72 7.195-16.19 15.25-16.19s11.227 5.54 11.227 5.54L37.747 37.4z"
-                                    fill="#FFF"></path>
-                                    <path class="hover-fillDark" d=
-                                    "M47.995 24zm0 0c0-.995-.807-1.974-1.802-1.974-1.15 0-1.8.94-1.8 1.83-.09 3.174-1.228 7.127-3.453 10.182-2.355 3.232-6.91 6.956-13.242 6.956-7.625 0-13.213-5.767-13.213-11.925 0-4.3 2.886-7.17 5.828-7.17 1.588 0 2.48.683 2.965 1.312.362.468 1.063.493 1.482.074L40.968 7.032A23.926 23.926 0 0 1 47.995 24z"
-                                    fill="#9251AC"></path></svg>
-                                    <div class="productLinkContent">
-                                        <h3 class="linkTitle">Radar</h3>
-                                        <p class="linkSub">Modern tools to help
-                                        beat&nbsp;fraud.</p>
-                                    </div></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <ul class="linkGroup linkList prodsubGroup">
-                            <li>
-                                <a class="linkContainer item-workswith" data-analytics-action=
-                                "works-with" data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/works-with">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-fillLight" d=
-                                "M15.998 12.495a1.03 1.03 0 0 1-.595.908L8.93 16.395a1.018 1.018 0 0 1-.86 0l-6.473-2.992a1.03 1.03 0 0 1-.594-.908V4.51c.006-.2.07-.39.18-.55L8.5 7.338l7.32-3.38c.108.16.172.35.178.55v7.984z"
-                                fill="#87BBFD"></path>
-                                <path class="hover-fillDark" d=
-                                "M15.998 12.495a1.03 1.03 0 0 1-.595.908L8.93 16.395a1.026 1.026 0 0 1-.43.095V7.34l7.32-3.38c.11.16.173.35.18.55v7.984z"
-                                fill="#6772E5"></path>
-                                <path class="hover-fillLight" d=
-                                "M8.5 5C6.567 5 5 4.228 5 3.275v-1.15h.098c.36.768 1.742 1.34 3.402 1.34 1.66.002 3.043-.572 3.402-1.34H12v1.15C12 4.228 10.433 5 8.5 5z"
-                                fill="#87BBFD"></path></svg>Works with Stripe</h3></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dropdownSection right" data-dropdown="developers">
-                    <div class="dropdownContent" style="width: 368px; height: 443px;">
-                        <div class="linkGroup documentationGroup">
-                            <a class="linkContainer withIcon item-documentation"
-                            data-analytics-action="documentation" data-analytics-source=
-                            "nav_dropdown" href="https://stripe.com/docs">
-                            <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                            <path class="hover-fillLight" d=
-                            "M.945 1.998h3.632C6.744 1.998 8.5 3.005 8.5 4.83v11.583c-.512 0-1.015-.337-1.33-.59-1.03-.828-3.057-.828-5.222-.828H.945A.944.944 0 0 1 0 14.052V2.944C0 2.422.423 2 .945 2z"
-                            fill="#87BBFD"></path>
-                            <path class="hover-fillDark" d=
-                            "M16.055 1.998h-3.632C10.257 1.998 8.5 3.005 8.5 4.83v11.583c.512 0 1.015-.337 1.33-.59 1.03-.828 3.057-.828 5.222-.828h1.003A.944.944 0 0 0 17 14.05V2.945A.944.944 0 0 0 16.055 2z"
-                            fill="#6772E5"></path></svg>Documentation</h3><span class=
-                            "linkSub">Start integrating Stripe’s products
-                            and&nbsp;tools.</span></a>
-                            <div class="documentationArticles">
-                                <ul>
-                                    <li>
-                                        <h4>Get started</h4>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_elements"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/elements">Elements</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_checkout_tutorial"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/checkout/tutorial">Checkout</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_mobile"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/mobile">Mobile apps</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_libraries"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/libraries">Libraries</a>
-                                    </li>
-                                </ul>
-                                <ul>
-                                    <li>
-                                        <h4>Popular topics</h4>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_apple_pay"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/apple-pay">Apple Pay</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_testing"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/testing">Testing</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_launch_checklist"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/checklist">Launch checklist</a>
-                                    </li>
-                                    <li>
-                                        <a data-analytics-action="docs_plugins"
-                                        data-analytics-source="nav_dropdown" href=
-                                        "https://stripe.com/docs/libraries#third-party-plugins">Plug-ins</a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                        <ul class="linkGroup linkList developersGroup">
-                            <li>
-                                <a class="linkContainer item-apiReference" data-analytics-action=
-                                "api_reference" data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/docs/api">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-strokeDark" d="M2 15h13M2 11h13M2 7h13M2 3h13"
-                                fill="none" stroke="#6772e5" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2"></path></svg>Full API
-                                Reference</h3></a>
-                            </li>
-                            <li>
-                                <a class="linkContainer item-apiStatus" data-analytics-action=
-                                "api_status" data-analytics-source="nav_dropdown" href=
-                                "https://status.stripe.com">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-strokeDark" d="M1 9h2.95l3-6.5 3 12 3-5.45L16 9"
-                                fill="none" stroke="#6772e5" stroke-linecap="round"
-                                stroke-linejoin="round" stroke-width="2"></path></svg>API
-                                Status</h3></a>
-                            </li>
-                            <li>
-                                <a class="linkContainer item-openSource" data-analytics-action=
-                                "open_source" data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/open-source">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-fillDark" d=
-                                "M8.5 17a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17zM6.987 6.078a.684.684 0 0 0-.968-.968L3.116 8.012a.684.684 0 0 0 0 .967l2.9 2.9a.684.684 0 0 0 .97-.967l-2.42-2.418 2.42-2.42zm6.996 1.95L11.08 5.123a.684.684 0 0 0-.966.968l2.418 2.42-2.418 2.417a.684.684 0 0 0 .967.967l2.904-2.902a.684.684 0 0 0 0-.966z"
-                                fill="#6772E5"></path></svg>Open Source</h3></a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="dropdownSection right" data-dropdown="company">
-                    <div class="dropdownContent" style="width: 428px; height: 346px;">
-                        <ul class="linkGroup linkList companyGroup">
-                            <li>
-                                <a class="linkContainer item-about" data-analytics-action="about"
-                                data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/about">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-fillDark" d=
-                                "M8.5 17a8.5 8.5 0 1 1 0-17 8.5 8.5 0 0 1 0 17zm.178-10.89c.76 0 1.726.278 2.486.69V4.443c-.828-.33-1.656-.502-2.484-.502-2.028 0-3.41 1.06-3.41 2.83 0 2.77 3.8 2.32 3.8 3.513 0 .462-.37.612-.93.612-.827 0-1.867-.366-2.706-.823v2.388c.93.4 1.843.592 2.705.592 2.077 0 3.48-1.027 3.48-2.827 0-2.98-3.82-2.447-3.82-3.572-.003-.39.352-.542.877-.542z"
-                                fill="#6772E5"></path></svg>About Stripe</h3></a>
-                            </li>
-                            <li>
-                                <a class="linkContainer item-customers" data-analytics-action=
-                                "customers" data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/customers">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-fillLight" d=
-                                "M2 16a1 1 0 0 1-1-1V9a4 4 0 0 1 8 0v7H2zm3-9a1.5 1.5 0 1 0 0 3 1.5 1.5 0 0 0 0-3z"
-                                fill="#87BBFD"></path>
-                                <path class="hover-fillDark" d=
-                                "M15 16H9a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h.55a2.5 2.5 0 0 1 4.9 0H15a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1z"
-                                fill="#6772E5"></path>
-                                <path class="hover-fillLight" d="M11 12h2v4h-2v-4z" fill="#87BBFD">
-                                </path></svg>Customers</h3></a>
-                            </li>
-                            <li>
-                                <a class="linkContainer item-jobs" data-analytics-action="jobs"
-                                data-analytics-source="nav_dropdown" href=
-                                "https://stripe.com/jobs">
-                                <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                                <path class="hover-fillDark" d=
-                                "M1.5 4h14c.828 0 1.5.67 1.5 1.5v8a1.5 1.5 0 0 1-1.5 1.5h-14A1.5 1.5 0 0 1 0 13.5v-8C0 4.67.67 4 1.5 4z"
-                                fill="#6772E5"></path>
-                                <path class="hover-fillLight" d="M13 15V4h2v11h-2zM2 4h2v11H2V4z"
-                                fill="#87BBFD"></path>
-                                <path class="hover-fillDark" d=
-                                "M11.5 3.5a1 1 0 0 0-1-1h-4a1 1 0 0 0-1 1V4H4v-.5A2.5 2.5 0 0 1 6.5 1h4A2.5 2.5 0 0 1 13 3.5V4h-1.5v-.5z"
-                                fill="#6772E5"></path></svg>Jobs</h3></a>
-                            </li>
-                        </ul>
-                        <div class="linkGroup blogGroup">
-                            <a class="linkContainer withIcon item-blog" data-analytics-action=
-                            "blog" data-analytics-source="nav_dropdown" href=
-                            "https://stripe.com/blog">
-                            <h3 class="linkTitle linkIcon"><svg height="17" width="17">
-                            <path class="hover-fillLight" d=
-                            "M1 4h4.5v11H1.75A1.75 1.75 0 0 1 0 13.25V5a1 1 0 0 1 1-1z" fill=
-                            "#87BBFD"></path>
-                            <path class="hover-fillDark" d=
-                            "M14 15H2v-.025a2.243 2.243 0 0 0 2-2.225V3a1 1 0 0 1 1-1h11a1 1 0 0 1 1 1v9a3 3 0 0 1-3 3zm1-11H6v3h9V4z"
-                            fill="#6772E5"></path></svg>From the blog</h3></a>
-                            <ul class="blogPosts">
-                                <li>
-                                    <a href="/blog/operating-kubernetes"><span class=
-                                    "title new">Learning to operate Kubernetes reliably</span>
-                                    <span class="new-badge">New</span></a>
-                                </li>
-                                <li>
-                                    <a href=
-                                    "/blog/query-connected-accounts-with-stripe-sigma"><span class=
-                                    "title new">Better Stripe Connect support in Sigma</span>
-                                    <span class="new-badge">New</span></a>
-                                </li>
-                                <li>
-                                    <a href="/blog/express-for-business"><span class="title">Stripe
-                                    Connect now supports Express accounts for businesses</span></a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
+<div id="app">
+  <app />
+</div>
+
 </template>
-<script>
-export default {
-  head: {
-    script: [
-      { src: '~/plugins/nav.js' },
-      // Supported since Nuxt 1.0
-      { src: '/plugins/nav.js', body: true },
-      { src: '/plugins/nav.js', defer: '' }
-    ]
+Vue.component('figma-logo', {
+  template: `
+    <svg width="40px" height="40px" viewBox="0 0 256 384" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" preserveAspectRatio="xMidYMid">
+        <g>
+            <path d="M64,384 C99.328,384 128,355.328 128,320 L128,256 L64,256 C28.672,256 0,284.672 0,320 C0,355.328 28.672,384 64,384 Z" fill="#0ACF83"></path>
+            <path d="M0,192 C0,156.672 28.672,128 64,128 L128,128 L128,256 L64,256 C28.672,256 0,227.328 0,192 Z" fill="#A259FF"></path>
+            <path d="M0,64 C0,28.672 28.672,0 64,0 L128,0 L128,128 L64,128 C28.672,128 0,99.328 0,64 Z" fill="#F24E1E"></path>
+            <path d="M128,0 L192,0 C227.328,0 256,28.672 256,64 C256,99.328 227.328,128 192,128 L128,128 L128,0 Z" fill="#FF7262"></path>
+            <path d="M256,192 C256,227.328 227.328,256 192,256 C156.672,256 128,227.328 128,192 C128,156.672 156.672,128 192,128 C227.328,128 256,156.672 256,192 Z" fill="#1ABCFE"></path>
+        </g>
+    </svg>
+  `
+})
+
+Vue.component('dollar-svg', {
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-3.5-6H14a.5.5 0 1 0 0-1h-4a2.5 2.5 0 1 1 0-5h1V6h2v2h2.5v2H10a.5.5 0 1 0 0 1h4a2.5 2.5 0 1 1 0 5h-1v2h-2v-2H8.5v-2z"/></svg>
+  `
+})
+
+Vue.component('slideshow-svg', {
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M8.17 3A3.001 3.001 0 0 1 11 1h2c1.306 0 2.417.835 2.83 2H21a1 1 0 0 1 1 1v16a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5.17zM4 5v14h16V5h-4.17A3.001 3.001 0 0 1 13 7h-2a3.001 3.001 0 0 1-2.83-2H4zm7-2a1 1 0 0 0 0 2h2a1 1 0 0 0 0-2h-2zm-1 6l5 3-5 3V9z"/></svg>
+  `
+})
+
+Vue.component('file-svg', {
+  template: `
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"/><path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM8 7h8v2H8V7zm0 4h8v2H8v-2zm0 4h5v2H8v-2z"/></svg>
+  `
+})
+
+Vue.component('featuresDropdown', {
+  template: `
+    <div class="feature-dropdown">
+      <div class="dropdown--section_title">Design</div>
+      <div class="dropdown-wrap">
+        <a href="#" class="dropdown-wrap__content type1">
+          <slideshow-svg />
+          <span>Design1</span>
+        </a>
+        <a href="#" class="dropdown-wrap__content type1">
+          <slideshow-svg />
+          <span>Design2</span>
+        </a>
+      </div>
+      <div class="dropdown--section_title">Prototyping</div>
+      <div class="dropdown-wrap">
+        <a href="#" class="dropdown-wrap__content type1">
+          <file-svg />
+          <span>Prototype1</span>
+        </a>
+        <a href="#" class="dropdown-wrap__content type1">
+          <file-svg />
+          <span>Prototype2</span>
+        </a>
+      </div>
+    </div>
+  `
+})
+
+Vue.component('enterpriseDropdownTop', {
+  template: `
+    <div class="enterprise-dropdown">
+      <div class="dropdown-wrap">
+        <a href="#" class="dropdown-wrap__content type2">
+          <dollar-svg style="min-width: 24px" />
+          <div>
+            <div class="content--top">Enterprise</div>
+            <div class="content--bottom">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  `
+})
+
+Vue.component('enterpriseDropdownBottom', {
+  template: `
+    <div class="enterprise-dropdown">
+      <div class="dropdown-wrap">
+        <a href="#" class="dropdown-wrap__content type1">
+          <dollar-svg />
+          <span>Price1</span>
+        </a>
+        <a href="#" class="dropdown-wrap__content type1">
+          <dollar-svg />
+          <span>Price2</span>
+        </a>
+      </div>
+    </div>
+  `
+})
+
+Vue.component('mobile-content', {
+  template: `
+    <div class="mobile-content">
+      Mobile Content
+    </div>
+  `
+})
+
+Vue.component('app', {
+  template: `
+    <vsm-menu :menu="menu">
+      <template #default="data">
+        <component
+          :is="data.item.content"
+          class="content"
+        />
+        <component
+          :is="data.item.secondaryContent"
+          class="content--secondary"
+        />
+      </template>
+      <li
+        slot="before-nav"
+        class="logo vsm-section vsm-mob-full"
+      >
+        <a href="#">
+          <figma-logo />
+        </a>
+      </li>
+      <template slot="after-nav">
+        <li class="vsm-section vsm-mob-hide">
+          <!--router-link, etc-->
+          <a href="#" class="vsm-link signup">
+            Sign In
+          </a>
+        </li>
+        <!--Display mobile menu-->
+        <vsm-mob>
+          <mobile-content />
+        </vsm-mob>
+      </template>
+    </vsm-menu>
+  `,
+  data() {
+    return {
+      menu: [
+        { title: 'Features', dropdown: 'features', content: 'featuresDropdown' },
+        { title: 'Enterprise', dropdown: 'enterprise', content: 'enterpriseDropdownTop', secondaryContent: 'enterpriseDropdownBottom' },
+        { title: 'Customers', attributes: { href: '#' } },
+        { title: 'Github', attributes: { href: 'https://github.com/Alexeykhr/vue-stripe-menu', target: '_blank' } },
+        { title: 'Login', attributes: { href: '#' } }
+      ]
+    }
   }
-}
-</script>
+})
+
+new Vue({
+  el: '#app'
+})
+
 <script>
 import AppIcon from "@/components/AppIcon.vue";
 
@@ -2867,6 +2500,121 @@ a.globalFooterCard.card-sigma, div.globalFooterCard.card-sigma {
     text-align: center;
     display: none;
     z-index: 1100
+}
+:root {
+  --primary: #333;
+  --secondary: #777;
+  --link: #000;
+}
+
+// For override styles uses .scss (see documentation)
+
+body {
+  overflow-y: scroll;
+  margin: 0;
+}
+
+.vsm-menu {
+  margin: 10px;
+  ul {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+}
+
+.vsm-root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  flex: 1 1 auto;
+}
+
+.vsm-section_menu {
+  > * {
+    padding: 0 25px;
+    font-weight: 500;
+    font-family: inherit;
+  }
+}
+
+.vsm-link {
+  position: relative;
+  color: var(--link);
+  text-decoration: none;
+  &:hover {
+    color: var(--link);
+  }
+}
+
+.signup {
+  color: #fff;
+  background: #333;
+  font-weight: bold;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+  transition: transform .1s;
+  &:hover {
+    color: #fff;
+    transform: translateY(-3px);
+  }
+}
+
+.content,
+.content--secondary,
+.mobile-content {
+  padding: 30px;
+}
+
+.content--secondary {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.dropdown--section_title {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+  &:not(:first-child) {
+    margin-top: 20px;
+  }
+}
+
+.dropdown-wrap__content {
+  display: flex;
+  align-items: center;
+  color: var(--primary);
+  text-decoration: none;
+  padding: 10px 5px 10px 0;
+  &:not(:last-child) {
+    margin-bottom: 5px;
+  }
+  &.type1 {
+    span {
+      margin-left: 10px;
+    }
+  }
+  &.type2 {
+    align-items: flex-start;
+    > div {
+      margin-left: 10px;
+    }
+    .content--bottom {
+      color: var(--secondary);
+    }
+  }
+}
+
+.feature-dropdown {
+  min-width: 250px;
+}
+
+.enterprise-dropdown {
+  width: 400px;
 }
 
 </style>
