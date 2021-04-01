@@ -48,8 +48,7 @@ export default {
   plugins: [
     "~/plugins/posts.server.js",
     "~/plugins/tags.server.js",
-    "~/plugins/dateformat.js",
-    "~/plugins/nav.js"
+    "~/plugins/dateformat.js"
   ],
   generate: {
     routes: dynamicRoutes
