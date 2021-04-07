@@ -40,13 +40,15 @@
   <div class="magazine-layout">
     <div class="magazine-column">
       <article class="article">
-        <h2 class="article-title article-title--large">
-          <a href="#" class="article-link">The First Signs of <mark class="mark mark--primary">Alcoholic Liver</mark> Damage Are Not in the Liver</a>
-        </h2>
-        <div class="article-excerpt">
-          <p>The combination of my father's death and my personal back ground lit a fire in me to know more</p>
-          <p>He was admitted to the hospital on June 24, 2016.
+          <div class="post" v-for="post in sortedPosts" :key="post.id">
+          <h2 class="article-title article-title--large">
+            <a :href="`blog/${post.slug}`" class="article-link">{{ post.title.rendered }}</a>
+          </h2>
+          <small>{{ post.date | dateformat }}</small>
+          <div class="article-excerpt" v-html="post.excerpt.rendered"></div>
+          <a :href="`blog/${post.slug}`" class="readmore slide">Read more ⟶</a>
         </div>
+       
         <div class="article-author">
           <div class="article-author-img">
             <img src="https://assets.codepen.io/285131/author-3.png" />
@@ -194,7 +196,7 @@
 export default {
   data() {
     return {
-      tagline: "Headless WordPress on the JAMstack"
+      tagline: "Explore the roots of cannabis, psychedelics, and other natural consciousness expanding substances"
     };
   }
 };
