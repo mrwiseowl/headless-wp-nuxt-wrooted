@@ -202,7 +202,7 @@
 export default {
   data() {
     return {
-      tagline: "Explore the roots of cannabis, psychedelics, and other natural consciousness expanding substances"
+      tagline: "Explore The Roots of Cannabis and Psychedelics"
     };
   }
 };
