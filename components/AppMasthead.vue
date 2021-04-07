@@ -41,14 +41,20 @@
     <div class="magazine-column">
       <article class="article">
           <div class="post" v-for="post in sortedPosts" :key="post.id">
-          <h2 class="article-title article-title--large">
-            <a :href="`blog/${post.slug}`" class="article-link">{{ post.title.rendered }}</a>
-          </h2>
+          <h3>
+            <a :href="`blog/${post.slug}`">{{ post.title.rendered }}</a>
+          </h3>
           <small>{{ post.date | dateformat }}</small>
-          <div class="article-excerpt" v-html="post.excerpt.rendered"></div>
+          <div v-html="post.excerpt.rendered"></div>
           <a :href="`blog/${post.slug}`" class="readmore slide">Read more ⟶</a>
         </div>
-       
+        <h2 class="article-title article-title--large">
+          <a href="#" class="article-link">The First Signs of <mark class="mark mark--primary">Alcoholic Liver</mark> Damage Are Not in the Liver</a>
+        </h2>
+        <div class="article-excerpt">
+          <p>The combination of my father's death and my personal back ground lit a fire in me to know more</p>
+          <p>He was admitted to the hospital on June 24, 2016.
+        </div>
         <div class="article-author">
           <div class="article-author-img">
             <img src="https://assets.codepen.io/285131/author-3.png" />
